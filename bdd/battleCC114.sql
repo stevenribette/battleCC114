@@ -33,6 +33,7 @@ create table JEUX
 (
    JEU_ID               int PRIMARY_KEY,
    JEU_NOM              varchar(256) not null,
+   JEU_IMG              varchar(256) not null,
    JEU_P_MIN            int not null,
    JEU_P_MAX            int,
    JEU_XP_VICTOIRE      decimal(10,2) not null
@@ -45,6 +46,7 @@ create table JOUEUR
 (
    JOU_ID               int PRIMARY_KEY,
    JOU_NAME             varchar(256) not null,
+   JOU_IMG              varchar(256) not null,
    JOU_MDP              varchar(256) not null,
    JOU_MAIL             varchar(256) not null,
    JOU_XP               decimal(10,2) not null,
@@ -108,5 +110,6 @@ create table TOURNOI
 (
    TOU_ID               int PRIMARY_KEY,
    TOU_NAME             varchar(256) not null,
+   TOU_DATE             date not null,
    JEU_ID               int not null,
 );
